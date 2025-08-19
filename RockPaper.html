@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<script>
+    debugger;
+
+    function getComputerChoice() {
+
+        let Maximum = 3
+        let rock = "rock"
+        let paper = "paper"
+        let scissor = "scissor"
+        let Random_Choice = Math.floor(Math.random() * Maximum);
+
+
+        if (Random_Choice == 0) {
+            return rock
+        }
+        if (Random_Choice == 1) {
+            return paper
+        }
+        if (Random_Choice == 2) {
+            return scissor
+        }
+    }
+
+    function getHumanChoice() {
+        let prompt1;
+        prompt1 = prompt("Rock, Paper, Scissor");
+        return prompt1;
+    }
+
+
+
+
+
+
+
+
+    function playRound(HumanChoice, computerChoice) {
+        let computerwon = "Computer Won!"
+        let humanwon = "Human Won!"
+        let noone = "No one Won!"
+
+        HumanChoice = HumanChoice.toLowerCase();
+
+        if (HumanChoice == "rock" && computerChoice == "paper") {
+            return "Computer Won!"
+
+
+        }
+
+        if (HumanChoice == "paper" && computerChoice == "scissor") {
+            return computerwon
+
+        }
+
+        if (HumanChoice == "scissor" && computerChoice == "rock") {
+            return computerwon
+
+        }
+
+        if (HumanChoice == "scissor" && computerChoice == "paper") {
+            return humanwon
+        }
+        if (HumanChoice == "scissor" && computerChoice == "scissor") {
+            return noone
+        }
+        if (HumanChoice == "paper" && computerChoice == "rock") {
+            return humanwon
+        }
+
+        if (HumanChoice == "paper" && computerChoice == "paper") {
+            return noone
+        }
+        if (HumanChoice == "rock" && computerChoice == "rock") {
+            return noone
+        }
+
+        if (HumanChoice == "rock" && computerChoice == "paper") {
+            return computerwon
+        }
+        if (HumanChoice == "rock" && computerChoice == "scissor") {
+            return humanwon
+
+        }
+    }
+    playGame();
+
+    function playGame() {
+        let humanScore = 0
+        let computerScore = 0
+
+
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+        let winner = playRound(humanSelection, computerSelection);
+
+        if (winner == "Human Won!") {
+            humanScore = humanScore + 1;
+        }
+
+        if (winner == "Computer Won!") {
+            computerScore = computerScore + 1;
+        }
+        
+        console.log("The human selection is: " + humanSelection)
+        console.log("The computer selection is: " + computerSelection)
+        console.log("winner : " + winner)
+        // hier  
+        humanSelection = getHumanChoice()
+        computerSelection = getComputerChoice()
+        winner = playRound(humanSelection, computerSelection);
+
+        if (winner == "Human Won!") {
+            humanScore = humanScore + 1;
+        }
+
+        if (winner == "Computer Won!") {
+            computerScore = computerScore + 1;
+        }
+
+        console.log("The human selection is: " + humanSelection)
+        console.log("The computer selection is: " + computerSelection)
+        console.log("winner : " + winner)
+        //bis hier
+
+
+        console.log("Human score: " + humanScore)
+        console.log("Computer score: " + computerScore)
+
+    
+
+
+            // hier  
+        humanSelection = getHumanChoice()
+        computerSelection = getComputerChoice()
+        winner = playRound(humanSelection, computerSelection);
+
+        if (winner == "Human Won!") {
+            humanScore = humanScore + 1;
+        }
+
+        if (winner == "Computer Won!") {
+            computerScore = computerScore + 1;
+        }
+
+        console.log("The human selection is: " + humanSelection)
+        console.log("The computer selection is: " + computerSelection)
+        console.log("winner : " + winner)
+        //bis hier
+
+
+        console.log("Human score: " + humanScore)
+        console.log("Computer score: " + computerScore)
+
+    
+
+
+            // hier  
+        humanSelection = getHumanChoice()
+        computerSelection = getComputerChoice()
+        winner = playRound(humanSelection, computerSelection);
+
+        if (winner == "Human Won!") {
+            humanScore = humanScore + 1;
+        }
+
+        if (winner == "Computer Won!") {
+            computerScore = computerScore + 1;
+        }
+
+        console.log("The human selection is: " + humanSelection)
+        console.log("The computer selection is: " + computerSelection)
+        console.log("winner : " + winner)
+        //bis hier
+
+
+        console.log("Human score: " + humanScore)
+        console.log("Computer score: " + computerScore)
+
+    
+
+
+            // hier  
+        humanSelection = getHumanChoice()
+        computerSelection = getComputerChoice()
+        winner = playRound(humanSelection, computerSelection);
+
+        if (winner == "Human Won!") {
+            humanScore = humanScore + 1;
+        }
+
+        if (winner == "Computer Won!") {
+            computerScore = computerScore + 1;
+        }
+
+        console.log("The human selection is: " + humanSelection)
+        console.log("The computer selection is: " + computerSelection)
+        console.log("winner : " + winner)
+        //bis hier
+
+
+        console.log("Human score: " + humanScore)
+        console.log("Computer score: " + computerScore)
+
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
