@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<script>
+    function getComputerChoice() {
+
+        let Maximum = 3
+        let rock = "rock"
+        let paper = "paper"
+        let scissor = "scissor"
+        let Random_Choice = Math.floor(Math.random() * Maximum);
+
+
+        if (Random_Choice == 0) {
+            return rock
+        }
+        if (Random_Choice == 1) {
+            return paper
+        }
+        if (Random_Choice == 2) {
+            return scissor
+        }
+    }
+
+    function getHumanChoice() {
+        let prompt1;
+        prompt1 = prompt("Rock, Paper, Scissor");
+        return prompt1;
+    }
+
+
+
+
+
+
+
+
+    function playRound(HumanChoice, computerChoice) {
+        let computerwon = "Computer Won!"
+        let humanwon = "You Won!"
+        let noone = "No one Won!"
+        var game_result = ""
+
+        HumanChoice = HumanChoice.toLowerCase();
+
+        if (HumanChoice == "rock" && computerChoice == "paper") {
+            game_result = "Computer Won!"
+
+
+        }
+
+        if (HumanChoice == "paper" && computerChoice == "scissor") {
+            game_result = computerwon
+
+        }
+
+        if (HumanChoice == "scissor" && computerChoice == "rock") {
+            game_result = computerwon
+
+        }
+
+        if (HumanChoice == "scissor" && computerChoice == "paper") {
+            game_result = humanwon
+        }
+        if (HumanChoice == "scissor" && computerChoice == "scissor") {
+            game_result = noone
+        }
+        if (HumanChoice == "paper" && computerChoice == "rock") {
+            game_result = humanwon
+        }
+
+        if (HumanChoice == "paper" && computerChoice == "paper") {
+            game_result = noone
+        }
+        if (HumanChoice == "rock" && computerChoice == "rock") {
+            game_result = noone
+        }
+
+        if (HumanChoice == "rock" && computerChoice == "paper") {
+            game_result = computerwon
+        }
+        if (HumanChoice == "rock" && computerChoice == "scissor") {
+            game_result = humanwon
+
+            
+        }
+
+let resultlabel = document.getElementById("result")
+resultlabel.textContent = game_result
+    }
+
+
+//* 
+   
+    //*
+</script>
+<div id="container">
+<button onclick="playRound('rock', getComputerChoice())">Rock</button>
+<button onclick="playRound('paper', getComputerChoice())">Paper</button>
+<button onclick="playRound('scissor', getComputerChoice())">Scissor</button>
+<label id="result"></label>
+
+</div>
+
+
+
+
+
+
+<body>
+
+</body>
+
+</html>
